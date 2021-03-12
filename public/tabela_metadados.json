@@ -1,0 +1,62 @@
+[
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Nome do objeto",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Nome designado para o satélite"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Data de lançamento",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Data de lançamento do satélite"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Fim de operações",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Fim da missão espacial do satélite"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Massa Inicial (kg)",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Massa inicial do payload (carga útil) e do sistema propulsivo em kilogramas (kg)"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Local de lançamento",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Nome do local onde o veículo foi lançado"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Veículo lançador",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Nome do modelo do veículo lançador"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Órbita",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Tipo de órbita descrita pelo satélite"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Proprietários",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Principais organizações responsáveis pelas operações do satélite"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Principais fabricantes",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Principais empresas que produziram o satélite"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Principal entidade brasileira envolvida",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Principal entidade brasileira responsável pela missão espacial"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Função Genérica",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Principal função realizada pelo satélite"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Principais funções",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Funções específicas realizadas pelo satélite"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Termo VCGE",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Termo presente no Vocabulário Controlado do Governo Eletrônico (VCGE)"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Código VCGE",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Código que descreve o termo do Vocabulário Controlado do Governo Eletrônico (VCGE) a partir de dois parâmetros: o termo raiz (pai) acompanhando de um ponto e posteriormente o código do termo (código)"
+  },
+  {
+    "Registro NSSDC/COSPAR ID (*)": "Status",
+    "Descreve o identificador internacional do objeto, sendo composto por três partes: o ano de lançamento, um número sequencial de três dígitos para os lançamentos realizados no ano em específico e um código de no máximo três letras que identificam cada componente em seu lançamento": "Situação do objeto em relação a sua missão espacial"
+  }
+]
