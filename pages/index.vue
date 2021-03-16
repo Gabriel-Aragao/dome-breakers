@@ -3,6 +3,12 @@
     <div class="sidebar">
       <div class="dates">
         <button
+          class="see-all-button"
+          @click="seeAll()"
+        >
+          See all
+        </button>
+        <button
           v-for="(date, index) in launchDates"
           :key="index"
           class="date-button"
@@ -14,22 +20,24 @@
     </div>
     <div class="main">
       <h1>The Dome Breakers Brasil</h1>
-      <img
-        class="base-img"
-        src="@/assets/flat.png"
-        alt="Flat Earth"
-        @click="hideDetails()"
-      >
-      <img
-        v-for="(position, index) in positions"
-        :key="index"
-        ref="satellites"
-        src="@/assets/satellite.gif"
-        alt="Satelite em Operação"
-        :style="position.style"
-        class="satellite-img"
-        @click="showDetails(index)"
-      >
+      <div class="animation">
+        <img
+          class="base-img"
+          src="@/assets/flat.png"
+          alt="Flat Earth"
+          @click="hideDetails()"
+        >
+        <img
+          v-for="(position, index) in positions"
+          :key="index"
+          ref="satellites"
+          src="@/assets/satellite.gif"
+          alt="Satelite em Operação"
+          :style="position.style"
+          class="satellite-img"
+          @click="showDetails(index)"
+        >
+      </div>
     </div>
     <div class="info">
       <div v-if="!isActive" class="about">
@@ -114,6 +122,30 @@ export default {
     }
   },
   methods: {
+    dateLowerThen (date1, date2) {
+      if (date2 === 'N/A') {
+        return true
+      }
+      const year1 = Number(date1.slice(6, 10))
+      const year2 = Number(date2.slice(6, 10))
+      if (year1 < year2) {
+        return true
+      } else if (year1 > year2) {
+        return false
+      } else {
+        const month1 = Number(date1.slice(3, 5))
+        const month2 = Number(date2.slice(3, 5))
+        if (month1 < month2) {
+          return true
+        } else if (month1 > month2) {
+          return false
+        } else {
+          const day1 = Number(date1.slice(0, 2))
+          const day2 = Number(date2.slice(0, 2))
+          return (day1 < day2)
+        }
+      }
+    },
     showDetails (index) {
       this.$data.isActive = true
       this.$data.name = this.$data.satellites[index].name
@@ -129,10 +161,33 @@ export default {
       this.$data.isActive = false
     },
     dateStatus (launchDate) {
-      for (let index = 0; index < this.$data.satellites.length; index++) {
-        const satellite = this.$refs.satellites[index]
-        satellite.style.visibility = 'hiden'
-        alert(satellite[index])
+      const satellites = this.$data.satellites
+      for (let index = 0; index < satellites.length; index++) {
+        const satelliteImg = this.$refs.satellites[index]
+        satelliteImg.style.visibility = 'hidden'
+      }
+      for (let index = 0; index < satellites.length; index++) {
+        const satelliteImg = this.$refs.satellites[index]
+        if (!this.dateLowerThen(launchDate, satellites[index].launchDate)) {
+          if (
+            !satellites[index].status.toLowerCase().includes('falha') &&
+            this.dateLowerThen(launchDate, satellites[index].endOfOperations)
+          ) {
+            satelliteImg.src = require('@/assets/satellite.gif')
+            satelliteImg.style.visibility = 'visible'
+          } else {
+            satelliteImg.src = require('@/assets/satellite-off.png')
+            satelliteImg.style.visibility = 'visible'
+          }
+        }
+      }
+    },
+    seeAll () {
+      const satellites = this.$data.satellites
+      for (let index = 0; index < satellites.length; index++) {
+        const satelliteImg = this.$refs.satellites[index]
+        satelliteImg.src = require('@/assets/satellite.gif')
+        satelliteImg.style.visibility = 'visible'
       }
     }
   }
@@ -146,21 +201,24 @@ export default {
   flex-direction: row;
   background-color: #050540;
   height: 100vh;
+  z-index: 0;
 }
 .sidebar{
   display: flex;
+  position: relative;
   flex-direction: row;
   align-items: center;
   padding: 0px 1.5%;
   width: 25%;
   max-width: 25%;
+  z-index: 1;
 }
 .dates{
   display: block;
+  z-index: 2;
 }
-.date-button{
-  width: 45%;
-  max-width: 45%;
+.see-all-button{
+  width: 91%;
   margin: 2% 1%;
   padding: 4% 0%;
   font-weight: 700;
@@ -169,6 +227,19 @@ export default {
   border-color: rgba(0,0,0,0);
   background-color: #03498B;
   color: white;
+  z-index: 3;
+}
+.date-button{
+  width: 45%;
+  margin: 2% 1%;
+  padding: 4% 0%;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 8px;
+  border-color: rgba(0,0,0,0);
+  background-color: #03498B;
+  color: white;
+  z-index: 3;
 }
 .date-button:hover{
   cursor: pointer;
@@ -179,23 +250,41 @@ export default {
 }
 .main{
   display: flex;
+  position: relative;
   flex-direction: column;
   align-content: center;
   align-items: center;
+  text-align: center;
   width: 50%;
   max-width: 50%;
+  z-index: 1;
+}
+.animation{
+  display: inline-block;
+  position: relative;
+  z-index: inherit;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
+  z-index: 2;
 }
 .base-img{
-  width: 80%;
-  z-index: 0;
+  width: 85%;
+  position: static;
+  z-index: -2;
 }
 .base-img:hover{
   cursor: pointer;
 }
 .satellite-img{
-  z-index: 1;
-  width: 2.5%;
+  width: 5%;
   position: absolute;
+  z-index: 3;
+  visibility: visible;
 }
 .satellite-img:hover{
   cursor: pointer;
@@ -209,23 +298,27 @@ export default {
   padding: 15px 25px;
   color: white;
   background-color: #050E4A;
+  z-index: 1;
 }
 .card{
   margin: 45px 10px;
   border: white solid;
   border-radius: 8px;
   border-width: 2px;
+  z-index: 2;
 }
 .card-title{
   text-align: center;
   border-bottom: white solid;
   border-bottom-width: 2px;
   padding: 5px;
+  z-index: 3;
 }
 .card-body{
   text-align: left;
   line-height: 20px;
   padding: 10px;
+  z-index: 3;
 }
 .is-active{
   visibility: visible;

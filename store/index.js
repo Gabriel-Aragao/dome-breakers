@@ -88,7 +88,7 @@ export const state = () => ({
       functionsDescription: 'Proposta educacional de incentivo à produção científica',
       VCGE: 'Educação básica',
       VGE: 7.123,
-      status: 'Fim das operações em 10/2016'
+      status: 'Fim das operações em 10/2017'
     },
     {
       id: '1998-067GX',
@@ -402,156 +402,156 @@ export const state = () => ({
   positions: [
     {
       style: `
-      top: 37%;
-      left: 32.5%;
+      top: 29%;
+      left: 12.5%;
       transform: rotate(-65deg);
       `
     },
     {
       style: `
-      top: 30%;
-      left: 34%;
+      top: 22%;
+      left: 15%;
       transform: rotate(-55deg);
       `
     },
     {
       style: `
-      top: 24%;
-      left: 36%;
+      top: 15%;
+      left: 19%;
       transform: rotate(-50deg);
       `
     },
     {
       style: `
-      top: 19.5%;
-      left: 38.5%;
+      top: 9.2%;
+      left: 24%;
       transform: rotate(-40deg);
       `
     },
     {
       style: `
-      top: 16%;
-      left: 41%;
-      transform: rotate(-35deg);
-      `
-    },
-    {
-      style: `
-      top: 13.5%;
-      left: 44%;
-      transform: rotate(-20deg);
+      top: 5%;
+      left: 29%;
+      transform: rotate(-30deg);
       `
     },
     {
       // Yasni
       style: `
-      top: 43%;
-      left: 53%;
+      top: 36%;
+      left: 54%;
       transform: rotate(-160deg);
-      `
-    },
-    {
-      style: `
-      top: 12.2%;
-      left: 51%;
-      transform: rotate(8deg);
-      `
-    },
-    {
-      style: `
-      top: 17%;
-      left: 57%;
-      transform: rotate(35deg);
       `
     },
     {
       // Kourou
       style: `
-      top: 49%;
-      left: 44%;
+      top: 44%;
+      left: 37.5%;
       transform: rotate(160deg);
       `
     },
     {
       style: `
-      top: 21%;
-      left: 59.5%;
-      transform: rotate(45deg);
+      top: -0.5%;
+      left: 42%;
+      transform: rotate(-5deg);
       `
     },
     {
       style: `
-      top: 26%;
-      left: 61.8%;
-      transform: rotate(50deg);
+      top: 1.5%;
+      left: 35%;
+      transform: rotate(-20deg);
+      `
+    },
+    {
+      style: `
+      top: -1%;
+      left: 49%;
+      transform: rotate(5deg);
+      `
+    },
+    {
+      style: `
+      top: 0.2%;
+      left: 56%;
+      transform: rotate(20deg);
       `
     },
     {
       // ISS (Tanegashima)
       style: `
-      top: 44%;
-      left: 59%;
+      top: 38%;
+      left: 69.5%;
       transform: rotate(-160deg);
       `
     },
     {
       // Alcântara
       style: `
-      top: 49%;
-      left: 46.5%;
+      top: 45%;
+      left: 43%;
       transform: rotate(-160deg);
       `
     },
     {
       // Taiyuan
       style: `
-      top: 43%;
-      left: 56%;
+      top: 37%;
+      left: 62%;
       transform: rotate(160deg);            
       `
     },
     {
       // Vandenberg
       style: `
-      top: 46%;
-      left: 36%;
+      top: 41%;
+      left: 20.5%;
       transform: rotate(160deg);
+      `
+    },
+    {
+      style: `
+      top: 3.5%;
+      left: 63%;
+      transform: rotate(25deg);
+      `
+    },
+    {
+      style: `
+      top: 8%;
+      left: 69%;
+      transform: rotate(35deg);
       `
     },
     {
       style: `
       top: 14%;
-      left: 54%;
-      transform: rotate(20deg);
-      `
-    },
-    {
-      style: `
-      top: 31%;
-      left: 63.3%;
-      transform: rotate(55deg);
+      left: 74%;
+      transform: rotate(50deg);
       `
     },
     {
       // Cape Canaveral
       style: `
-      top: 48%;
-      left: 40.5%;
+      top: 42%;
+      left: 30%;
       transform: rotate(160deg);
       `
     },
     {
       style: `
-      top: 12%;
-      left: 47.5%;
-      transform: rotate(-8deg);
+      top: 21%;
+      left: 78.3%;
+      transform: rotate(55deg);
       `
     },
     {
       style: `
-      top: 37%;
-      left: 64.5%;
-      transform: rotate(65deg);
+      top: 28%;
+      left: 81%;
+      transform: rotate(60deg);
       `
     }
   ]
