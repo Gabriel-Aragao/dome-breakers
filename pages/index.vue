@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="sidebar">
-      <div class="dates">
+      <div class="buttons">
         <button
           class="see-all-button"
           @click="seeAll()"
@@ -19,82 +19,84 @@
       </div>
     </div>
     <div class="main">
-      <h1>The Dome Breakers Brasil</h1>
-      <div class="animation">
-        <img
-          class="base-img"
-          src="@/assets/flat.png"
-          alt="Flat Earth"
-          @click="hideDetails()"
-        >
-        <img
-          v-for="(position, index) in positions"
-          :key="index"
-          ref="satellites"
-          src="@/assets/satellite.gif"
-          alt="Satelite em Operação"
-          :style="position.style"
-          class="satellite-img"
-          @click="showDetails(index)"
-        >
-      </div>
-    </div>
-    <div class="info">
-      <div v-if="!isActive" class="about">
-        <h2>About</h2>
-        <p>
-          On the flat Earth, satellites do not go into orbit, get stuck in the dome.
-          They are the <strong>Dome Breakers</strong>.
-        </p>
-        <div class="card">
-          <h4 class="card-title">
-            Usage
-          </h4>
-          <p class="card-body">
-            Select a date on the left to see the satellites' status back then.
-          </p>
-          <p class="card-body">
-            Discover information about satellites by clicking in one of them.
-          </p>
-        </div>
-        <div class="card">
-          <h4 class="card-title">
-            GitHub
-          </h4>
-          <p class="card-body">
-            Checkout the
-            <a href="https://github.com/Gabriel-Aragao/dome-breakers" target="_blank">
-              GitHub repository of the project.
-            </a>
-          </p>
+      <div class="core">
+        <h1>The Dome Breakers Brasil</h1>
+        <div class="animation">
+          <img
+            class="base-img"
+            src="@/assets/flat.png"
+            alt="Flat Earth"
+            @click="hideDetails()"
+          >
+          <img
+            v-for="(position, index) in positions"
+            :key="index"
+            ref="satellites"
+            src="@/assets/satellite.gif"
+            alt="Satelite em Operação"
+            :style="position.style"
+            class="satellite-img"
+            @click="showDetails(index)"
+          >
         </div>
       </div>
-      <div v-else class="details">
-        <h2>Details</h2>
-        <div
-          :class="{'is-active': isActive}"
-          class="card"
-        >
-          <h4 class="card-title">
-            {{ name }}
-          </h4>
-          <p class="card-body">
-            <strong>NSSDC ID:</strong> {{ id }} <br>
-            <strong>Launch date:</strong> {{ launchDate }} <br>
-            <strong>Launch location:</strong> {{ launchLocation }} <br>
-            <strong>Launch vehicle:</strong> {{ launchVehicle }} <br>
-            <strong>Orbite:</strong> {{ orbite }} <br>
-            <strong>Manufacturers:</strong> {{ manufacturer }} <br>
-            <strong>Status:</strong> {{ status }}
+      <div class="info">
+        <div v-if="!isActive" class="about">
+          <h2>About</h2>
+          <p>
+            On the flat Earth, satellites do not go into orbit, get stuck in the dome.
+            They are the <strong>Dome Breakers</strong>.
           </p>
+          <div class="card">
+            <h4 class="card-title">
+              Usage
+            </h4>
+            <p class="card-body">
+              Select a date on the left to see the satellites' status back then.
+            </p>
+            <p class="card-body">
+              Discover information about satellites by clicking in one of them.
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="card-title">
+              GitHub
+            </h4>
+            <p class="card-body">
+              Checkout the
+              <a href="https://github.com/Gabriel-Aragao/dome-breakers" target="_blank">
+                GitHub repository of the project.
+              </a>
+            </p>
+          </div>
         </div>
-        <div class="card">
-          <h4 class="card-title">
-            Usage
-          </h4>
-          <p class="card-body">
-            To get back click on the Flat Earth
-          </p>
+        <div v-else class="details">
+          <h2>Details</h2>
+          <div
+            :class="{'is-active': isActive}"
+            class="card"
+          >
+            <h4 class="card-title">
+              {{ name }}
+            </h4>
+            <p class="card-body">
+              <strong>NSSDC ID:</strong> {{ id }} <br>
+              <strong>Launch date:</strong> {{ launchDate }} <br>
+              <strong>Launch location:</strong> {{ launchLocation }} <br>
+              <strong>Launch vehicle:</strong> {{ launchVehicle }} <br>
+              <strong>Orbite:</strong> {{ orbite }} <br>
+              <strong>Manufacturers:</strong> {{ manufacturer }} <br>
+              <strong>Status:</strong> {{ status }}
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="card-title">
+              Usage
+            </h4>
+            <p class="card-body">
+              To get back click on the Flat Earth
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -200,25 +202,28 @@ export default {
   display: flex;
   flex-direction: row;
   background-color: #050540;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  margin: 0%;
   z-index: 0;
 }
 .sidebar{
   display: flex;
-  position: relative;
   flex-direction: row;
-  align-items: center;
-  padding: 0px 1.5%;
-  width: 25%;
-  max-width: 25%;
+  align-items: flex-start;
+  position: relative;
+  padding: 0% 1.5%;
   z-index: 1;
 }
-.dates{
+.buttons{
   display: block;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin: 2% 0%;
   z-index: 2;
 }
 .see-all-button{
-  width: 91%;
   margin: 2% 1%;
   padding: 4% 0%;
   font-weight: 700;
@@ -230,7 +235,6 @@ export default {
   z-index: 3;
 }
 .date-button{
-  width: 45%;
   margin: 2% 1%;
   padding: 4% 0%;
   font-weight: 700;
@@ -240,6 +244,13 @@ export default {
   background-color: #03498B;
   color: white;
   z-index: 3;
+}
+.see-all-button:hover{
+  cursor: pointer;
+  background-color: #026BB0;
+}
+.see-all-button:focus{
+  background-color: #2CA0DC;
 }
 .date-button:hover{
   cursor: pointer;
@@ -251,12 +262,20 @@ export default {
 .main{
   display: flex;
   position: relative;
-  flex-direction: column;
   align-content: center;
   align-items: center;
   text-align: center;
-  width: 50%;
-  max-width: 50%;
+  width: 75%;
+  max-width: 75%;
+  z-index: 1;
+}
+.core{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  text-align: center;
   z-index: 1;
 }
 .animation{
@@ -293,8 +312,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
-  max-width: 25%;
+  height: 100%;
   padding: 15px 25px;
   color: white;
   background-color: #050E4A;
@@ -325,7 +343,6 @@ export default {
 }
 h1{
   font-weight: 1000;
-  font-size: 40px;
   letter-spacing: 1px;
   margin: 15px;
   color: white;
@@ -342,5 +359,55 @@ p{
 a {
   color: white;
   font-weight: 700;
+}
+@media only screen and (orientation: landscape) {
+  .main {
+    flex-direction: row;
+    width: 75%;
+    align-items: flex-start;
+  }
+  .sidebar{
+    width: 25%;
+  }
+  .see-all-button{
+    width: 98%;
+  }
+  .date-button{
+    width: 48%;
+  }
+  .core{
+    width: 67%;
+  }
+  .info{
+    width: 33%;
+  }
+  h1{
+    font-size: 40px;
+  }
+}
+@media only screen and (orientation: portrait){
+  .main {
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+  }
+  .sidebar{
+    width: 30%;
+  }
+  .see-all-button{
+    width: 98%;
+  }
+  .date-button{
+    width: 98%;
+  }
+  .core{
+    width: 100%;
+  }
+  .info{
+    width: 100%;
+  }
+  h1{
+    font-size: 30px;
+  }
 }
 </style>
