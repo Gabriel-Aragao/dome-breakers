@@ -197,13 +197,13 @@ export default {
 </script>
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .container{
   display: flex;
   flex-direction: row;
   background-color: #050540;
-  height: 100%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0%;
   z-index: 0;
 }
@@ -360,7 +360,7 @@ a {
   color: white;
   font-weight: 700;
 }
-@media only screen and (orientation: landscape) {
+@media screen and (min-width:790px) {
   .main {
     flex-direction: row;
     width: 75%;
@@ -385,7 +385,7 @@ a {
     font-size: 40px;
   }
 }
-@media only screen and (orientation: portrait){
+@media screen and (max-width:789px){
   .main {
     flex-direction: column;
     width: 70%;
