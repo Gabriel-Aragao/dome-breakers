@@ -45,7 +45,7 @@
           <h2>About</h2>
           <p>
             On the flat Earth, satellites do not go into orbit, get stuck in the dome.
-            They are the <strong>Dome Breakers</strong>.
+            They, are the <strong>Dome Breakers</strong>.
           </p>
           <div class="card">
             <h4 class="card-title">
