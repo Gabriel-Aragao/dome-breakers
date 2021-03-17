@@ -203,7 +203,8 @@ export default {
   flex-direction: row;
   background-color: #050540;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: -webkit-fill-available;
   margin: 0%;
   z-index: 0;
 }
